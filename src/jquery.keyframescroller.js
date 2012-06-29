@@ -81,7 +81,7 @@
 		};
 		
 		// We use the position of the scroll carriage to work out the keyframe
-		keyframeScroll.calculateCurKeyFrame = function()
+		keyframescroller.calculateCurKeyFrame = function()
 		{
 			var keyframeScrollEle, trackEle, carriageEle, offset, percentage, oldKeyFrame, newKeyFrame;
 			keyframeScrollEle = keyframescroller.settings.keyframeScrollEle;
@@ -101,7 +101,7 @@
 		}
 		
 		// Correct the position of the carriage after dragging
-		keyframeScroll.correctCarriagePos = function()
+		keyframescroller.correctCarriagePos = function()
 		{
 			var trackEle, carriageEle, correctPos;
 			trackEle = keyframescroller.settings.trackEle;
@@ -114,12 +114,12 @@
 		}
 		
 		// Set the current frame
-		keyframeScroll.setCurKeyFrame = function(key)
+		keyframescroller.setCurKeyFrame = function(key)
 		{
 			keyframescroller.curKeyframe = key;
 		}
 		
-		keyframeScroll.resize = function() {
+		keyframescroller.resize = function() {
 			var keyframeScrollEle, trackEle, carriageEle, keyframes;
 			keyframeScrollEle = this.settings.keyframeScrollEle;
 			trackEle = this.settings.trackEle;
@@ -131,7 +131,7 @@
 		};
 		
 		// Swipe navigation
-		keyframeScroll.swipeNav = function(event, direction)
+		keyframescroller.swipeNav = function(event, direction)
 		{
 			var newKey;
 			switch (direction) {
