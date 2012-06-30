@@ -108,6 +108,11 @@
 			carriageEle = keyframescroller.settings.carriageEle;
 			correctPos = (keyframescroller.trackWidth / keyframescroller.settings.totalKeyframes) * keyframescroller.curKeyframe;
 
+			// Too far to the right?
+			if(correctPos >= keyframescroller.trackWidth) {
+				correctPos = keyframescroller.trackWidth - carriageEle.outerWidth();
+			}
+
 			$(carriageEle).animate({
 				left: correctPos
 			}, 300);
@@ -156,7 +161,7 @@
 				// Left
 		        case 'left':
 					if (keyframescroller.settings.orientation == 'vertical') return;
-					if (keyframescroller.curKeyframe == keyframeScroll.settings.totalKeyframes-1) return;
+					if (keyframescroller.curKeyframe == keyframescroller.settings.totalKeyframes-1) return;
 					newKey = keyframescroller.curKeyframe + 1;
 		            break;
 			}
