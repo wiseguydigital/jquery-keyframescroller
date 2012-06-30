@@ -1,5 +1,5 @@
-jQuery Keyscroll
-================
+jQuery Keyframescroller v1.0
+============================
 
 ##A nifty little keyframe generating scrollbar
 
